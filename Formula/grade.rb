@@ -7,11 +7,11 @@ class Grade < Formula
 
   if OS.mac?
     url "https://github.com/sv-go-tools/grade/releases/download/v0.1.0/grade-v0.1.0-darwin-amd64.tar.gz"
-    sha256 "087e20e304dbfb16e202a45cd19f77fd270689ef13cf1c3bb42adbd67a4913a2"
+    sha256 "891946aa5b0e60bd2fa9766bfae27ed359a002e28193a7fa865e34aae6acf200"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/sv-go-tools/grade/releases/download/v0.1.0/grade-v0.1.0-linux-amd64.tar.gz"
-      sha256 "5c46a1bb35943ca4666539ae55c7057a8a5630fa3ee7852a8dbc21108118dabc"
+      sha256 "d4831483e3f8af9b2c81b903891325eacaf185ec2ac9184755bbab682b0e9213"
     end
   end
 
