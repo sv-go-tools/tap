@@ -2,16 +2,16 @@
 class Grade < Formula
   desc "grade transforms Go benchmark data into various format so that you can uploads the data to a database and track the performance over time."
   homepage "https://github.com/sv-tools/grade"
-  version "1.0.0"
+  version "1.1.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sv-tools/grade/releases/download/v1.0.0/grade-v1.0.0-darwin-amd64.tar.gz"
-    sha256 "e0b4d8f828784ba5a3f937ee91b834a0e780600490a268b854a76ed757205c3c"
+    url "https://github.com/sv-tools/grade/releases/download/v1.1.0/grade-v1.1.0-darwin-amd64.tar.gz"
+    sha256 "4ec2f72d24998375f29a9dd83252a79dce295a426a743c7ac6dec3090273ed92"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/sv-tools/grade/releases/download/v1.0.0/grade-v1.0.0-linux-amd64.tar.gz"
-      sha256 "81b68503cf8844bb4ce748025bc3ea808282541d93e5c4d6e44e5dd77fa1d211"
+      url "https://github.com/sv-tools/grade/releases/download/v1.1.0/grade-v1.1.0-linux-amd64.tar.gz"
+      sha256 "8452e1b415ef0a71ff50e997c5831f94c1790aa9001ccdcc60a408e44f3168de"
     end
   end
 
