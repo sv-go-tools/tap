@@ -2,16 +2,16 @@
 class Bumptag < Formula
   desc "bumptag is a tool to increment a version and to create a git tag with an annotation."
   homepage "https://github.com/sv-tools/bumptag"
-  version "1.4.0"
+  version "1.5.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.4.0/bumptag-v1.4.0-darwin-amd64.tar.gz"
-    sha256 "c87bd25980e4601a76f507daff1cd178daa82024d5a51a01ebba65524f3780ef"
+    url "https://github.com/sv-tools/bumptag/releases/download/v1.5.0/bumptag-v1.5.0-darwin-amd64.tar.gz"
+    sha256 "decc768afb0bbea950ad9b76ab2bea529f2999867d571998808bbb5d6d9c6818"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/sv-tools/bumptag/releases/download/v1.4.0/bumptag-v1.4.0-linux-amd64.tar.gz"
-      sha256 "f549c2c5b07bb8decfffb03e6b338651c0aa6797e406927ea2e831c0358de351"
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.5.0/bumptag-v1.5.0-linux-amd64.tar.gz"
+      sha256 "742acaa272f4359188f696710ffb35781a119732704c145764df02354627f0a2"
     end
   end
 
