@@ -7,11 +7,11 @@ class Bumptag < Formula
 
   if OS.mac?
     url "https://github.com/sv-tools/bumptag/releases/download/v1.5.1/bumptag-v1.5.1-darwin-amd64.tar.gz"
-    sha256 "0eb5e6d510f70e1261819ffe29cbdf70f3403df59be7ffc3a359ca2565821a6b"
+    sha256 "40edb91ab735eddce44a17b0c83c0832a52da0870e080ff6e0bdc7489032aee6"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/sv-tools/bumptag/releases/download/v1.5.1/bumptag-v1.5.1-linux-amd64.tar.gz"
-      sha256 "146e1b65b8e6d87571dd0970250f651cc6c352e8aabc22a90280d6518ef94f74"
+      sha256 "8db96e69a49cf023424beb5e521c6122c15f261ba247fb5fd8de6dfa7e34125f"
     end
   end
 
