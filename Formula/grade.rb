@@ -9,11 +9,11 @@ then it can upload the data to a database to track the performance over time.
 
   if OS.mac?
     url "https://github.com/sv-tools/grade/releases/download/v1.3.0/grade-v1.3.0-darwin-amd64.tar.gz"
-    sha256 "5307ef229f12ebb06657596190bb64b382c32153c3ddeeb7327a9f7d0887284e"
+    sha256 "89accd15578d0d98f66a5f3bc691d17f23f420f6b4e76edfb6c62c8370b03cc4"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/sv-tools/grade/releases/download/v1.3.0/grade-v1.3.0-linux-amd64.tar.gz"
-      sha256 "60fb74357804188713be48a29c1d1d2645ed946e4e9c64ef644fc5fb0e145afa"
+      sha256 "4b82cf4476f36adf9f46fcf10bedb39f8ce242ee9e4d530306a0864d6b41c8a8"
     end
   end
 
