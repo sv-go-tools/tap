@@ -4,16 +4,16 @@ class Grade < Formula
 then it can upload the data to a database to track the performance over time.
 "
   homepage "https://github.com/sv-tools/grade"
-  version "1.3.0"
+  version "1.3.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sv-tools/grade/releases/download/v1.3.0/grade-v1.3.0-darwin-amd64.tar.gz"
-    sha256 "89accd15578d0d98f66a5f3bc691d17f23f420f6b4e76edfb6c62c8370b03cc4"
+    url "https://github.com/sv-tools/grade/releases/download/v1.3.1/grade-v1.3.1-darwin-amd64.tar.gz"
+    sha256 "7d11d2270b7cdf144ceaac24ea978a4fc35220daa6bcc6eddad2e810f45748c6"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/sv-tools/grade/releases/download/v1.3.0/grade-v1.3.0-linux-amd64.tar.gz"
-      sha256 "4b82cf4476f36adf9f46fcf10bedb39f8ce242ee9e4d530306a0864d6b41c8a8"
+      url "https://github.com/sv-tools/grade/releases/download/v1.3.1/grade-v1.3.1-linux-amd64.tar.gz"
+      sha256 "ec81f551c92e18e77ed10d9f660c21bfa1627f5d7733749aa108d285c135ed15"
     end
   end
 
