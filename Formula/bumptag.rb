@@ -5,25 +5,25 @@
 class Bumptag < Formula
   desc "bumptag is a tool to increment a version and to create a git tag with an annotation"
   homepage "https://github.com/sv-tools/bumptag"
-  version "1.9.0"
+  version "1.9.1"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.0/bumptag-v1.9.0-darwin-amd64.tar.gz"
-    sha256 "e404585fe6ae0d6c0a41574cf9dd61d5f584e48717d75950636eafa5bb13eab3"
+    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.1/bumptag-v1.9.1-darwin-amd64.tar.gz"
+    sha256 "9e2df06172c02f59e6782bce3a958b48a55f77696a289774cfb87dd8b4a1b8fa"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.0/bumptag-v1.9.0-darwin-arm64.tar.gz"
-    sha256 "62cc4a80802f9fe683fb2c64f464cf73f24d58d86c0a1bcac8b1eb2d8f576813"
+    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.1/bumptag-v1.9.1-darwin-arm64.tar.gz"
+    sha256 "105fe4c1aedc5299ce10239d414e8bd2ff0f7dfbb866cf6dd987fdbe6edb6707"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.0/bumptag-v1.9.0-linux-amd64.tar.gz"
-    sha256 "4bc52ed03719a3a85ded00672066372327a2bb628ff38c6d0e628893cc77818e"
+    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.1/bumptag-v1.9.1-linux-amd64.tar.gz"
+    sha256 "e8d4903f721b798df37b7167e9c54b55423f3836ca46265a6fffaf9ac1b2b083"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.0/bumptag-v1.9.0-linux-arm64.tar.gz"
-    sha256 "8fe4dac1fbdf4f17512f4882c6acd0c65c37564d836d1ae23eb53589febf7351"
+    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.1/bumptag-v1.9.1-linux-arm64.tar.gz"
+    sha256 "c329fbc290780849fe17fd01bd68d8331f3d5c552c7216c3499ac9e48e61b321"
   end
 
   depends_on "git"
