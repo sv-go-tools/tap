@@ -5,25 +5,30 @@
 class Bumptag < Formula
   desc "bumptag is a tool to increment a version and to create a git tag with an annotation"
   homepage "https://github.com/sv-tools/bumptag"
-  version "1.9.1"
+  version "1.10.0"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.1/bumptag-v1.9.1-darwin-amd64.tar.gz"
-    sha256 "9e2df06172c02f59e6782bce3a958b48a55f77696a289774cfb87dd8b4a1b8fa"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.0/bumptag-v1.10.0-darwin-amd64.tar.gz"
+      sha256 "6bb7a33f5ced6cce51bd12dff98ade6301c76d204554865115d6af667af78aab"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.0/bumptag-v1.10.0-darwin-arm64.tar.gz"
+      sha256 "2a9c6b36fc6525554dde2f4bd3ed1ce8303a3d8060bd3d90e1fda89e652102e5"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.1/bumptag-v1.9.1-darwin-arm64.tar.gz"
-    sha256 "105fe4c1aedc5299ce10239d414e8bd2ff0f7dfbb866cf6dd987fdbe6edb6707"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.1/bumptag-v1.9.1-linux-amd64.tar.gz"
-    sha256 "e8d4903f721b798df37b7167e9c54b55423f3836ca46265a6fffaf9ac1b2b083"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sv-tools/bumptag/releases/download/v1.9.1/bumptag-v1.9.1-linux-arm64.tar.gz"
-    sha256 "c329fbc290780849fe17fd01bd68d8331f3d5c552c7216c3499ac9e48e61b321"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.0/bumptag-v1.10.0-linux-amd64.tar.gz"
+      sha256 "8defb4cf34d53a64a7b54c2e2f5d00399e99adafc2e902781272da8e43590bc0"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.0/bumptag-v1.10.0-linux-arm64.tar.gz"
+      sha256 "dbb4ee232502f0c58891b0bfd441f3fe3625f9107526ed091455fa3a567e8b16"
+    end
   end
 
   depends_on "git"
