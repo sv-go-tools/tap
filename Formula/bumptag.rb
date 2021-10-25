@@ -5,37 +5,48 @@
 class Bumptag < Formula
   desc "bumptag is a tool to increment a version and to create a git tag with an annotation"
   homepage "https://github.com/sv-tools/bumptag"
-  version "1.10.0"
+  version "1.10.1"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.0/bumptag-v1.10.0-darwin-amd64.tar.gz"
-      sha256 "6bb7a33f5ced6cce51bd12dff98ade6301c76d204554865115d6af667af78aab"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.0/bumptag-v1.10.0-darwin-arm64.tar.gz"
-      sha256 "2a9c6b36fc6525554dde2f4bd3ed1ce8303a3d8060bd3d90e1fda89e652102e5"
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.1/bumptag-v1.10.1-darwin-arm64.tar.gz"
+      sha256 "3e2291b2f06c95de71e3582a2d2b4945e65da20424c3a7694cf9d2f08b077c82"
+
+      def install
+        bin.install "bumptag"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.1/bumptag-v1.10.1-darwin-amd64.tar.gz"
+      sha256 "f9d3d80130597f3ce304b6bce6f89ccd437d6a3521c9fd96f847dfb94f569fdf"
+
+      def install
+        bin.install "bumptag"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.0/bumptag-v1.10.0-linux-amd64.tar.gz"
-      sha256 "8defb4cf34d53a64a7b54c2e2f5d00399e99adafc2e902781272da8e43590bc0"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.0/bumptag-v1.10.0-linux-arm64.tar.gz"
-      sha256 "dbb4ee232502f0c58891b0bfd441f3fe3625f9107526ed091455fa3a567e8b16"
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.1/bumptag-v1.10.1-linux-arm64.tar.gz"
+      sha256 "70c6a32a842c490403eac6e1b2ce5eeba5fe2421ffdf7921a87cc9415f68501f"
+
+      def install
+        bin.install "bumptag"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sv-tools/bumptag/releases/download/v1.10.1/bumptag-v1.10.1-linux-amd64.tar.gz"
+      sha256 "106d821ba19274f6ace822a4fcc85cc157914d11a1d87e92b2a60263f8bd5a2a"
+
+      def install
+        bin.install "bumptag"
+      end
     end
   end
 
   depends_on "git"
-
-  def install
-    bin.install "bumptag"
-  end
 
   test do
     assert_equal `#{bin}/bumptag --version`, "bumptag version v#{version}"
